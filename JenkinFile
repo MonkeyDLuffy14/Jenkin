@@ -1,0 +1,23 @@
+pipeline {
+	agent any // This specifies that the pipeline can execute on any available agent
+
+	stages {
+    	stage("build") {
+        	steps {
+            	echo 'building the application..' // This step echoes a message indicating that the application is being built
+        	}
+    	}
+
+    	stage("test") {
+        	steps {
+            	echo 'testing the application..' // This step echoes a message indicating that the application is being tested
+        	}
+    	}
+
+    	stage("deploy") {
+        	steps {
+            	echo 'deploying the application..' // This step echoes a message indicating that the application is being deployed
+        	}
+    	}
+	}
+}
